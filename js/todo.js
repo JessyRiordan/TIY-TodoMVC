@@ -9,8 +9,10 @@ var taskList = [ ];
 function listTasks(){
 }
 
-function addTaskToList(task, list){
-  return list.push(task)
+function addTaskToList
+  return list.push({
+      text: task, completed: false
+    });
 }
 
 function deleteTaskFromList (position, list){
@@ -25,21 +27,21 @@ console.log("This should be an empty task list:");
 console.log(taskList);
 
 addTaskToList("Remember the milk", taskList);
-expect(taskList[0]).to.equal("Remember the milk");
+expect(taskList[0].text).to.equal("Remember the milk");
 expect(taskList.length).to.equal(1);
 console.log("This should be a task list with one task:");
 console.log(taskList);
 
 expect(taskList.length).to.equal(1);
 addTaskToList("Take out the trash", taskList);
-expect(taskList[1]).to.equal("Take out the trash");
+expect(taskList[1].text).to.equal("Take out the trash");
 expect(taskList.length).to.equal(2);
 console.log("This should be a task list with two tasks:");
 console.log(taskList);
 
 expect(taskList.length).to.equal(2);
 addTaskToList("Clean up cat litter", taskList);
-expect(taskList[2]).to.equal("Clean up cat litter");
+expect(taskList[2].text).to.equal("Clean up cat litter");
 expect(taskList.length).to.equal(3);
 console.log("This should be a task list with three tasks:");
 console.log(taskList);
@@ -50,5 +52,5 @@ expect(taskList.length).to.equal(2);
 expect(taskList[0]).to.equal("Remember the milk");
 expect(taskList[1]).to.equal("Take out the trash");
 expect(taskList[2]).to.equal(undefined);
-console.log("This should be a task list with two tasks, Clean up the cat litter was deleted:"); 
+console.log("This should be a task list with two tasks, Clean up the cat litter was deleted:");
 console.log(taskList);
