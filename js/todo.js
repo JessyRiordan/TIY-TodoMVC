@@ -15,6 +15,7 @@
     }
 
     window.todos = {
+      "taskList": taskList,
       "addTask": addTask,
       // "completeTask": completeTask,
       "deleteTask": deleteTask

@@ -18,7 +18,9 @@
 	  // newTodoInput.addEventListener('keyup', function() { console.log(arguments); });
 		newTodoInput.addEventListener('keyup', function addTodoController(event){
 			if ( event.keyCode === 13 ){
-				console.log("sanity check");
+				var task = document.querySelector('input.new-todo').value;
+				//todos.taskList.push(task);
+				console.log(task);
 				}
 			// TO ADD A NEW TASK:
 			// GIVEN an HTML element <input class="new-todo">
