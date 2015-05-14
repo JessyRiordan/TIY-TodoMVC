@@ -20,6 +20,7 @@
 			if ( event.keyCode === 13 ){
 				var task = document.querySelector('input.new-todo').value;
 				todos.taskList.push(task);
+				document.querySelector("ul.todo-list > li").textContent = task;
 				document.querySelector('input.new-todo').value= "";
 				console.log(todos.taskList.length);
 				if (todos.taskList.length === 1) {
