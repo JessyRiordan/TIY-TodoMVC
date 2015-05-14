@@ -21,6 +21,13 @@
 				var task = document.querySelector('input.new-todo').value;
 				todos.taskList.push(task);
 				document.querySelector('input.new-todo').value= "";
+				console.log(todos.taskList.length);
+				if (todos.taskList.length === 1) {
+					(document.querySelector('span.todo-count').textContent = (todos.taskList.length + " " + "item left"));
+				} else {
+					(document.querySelector('span.todo-count').textContent = (todos.taskList.length + " " + "items left"));
+				};
+
 				console.log(todos.taskList);
 				}
 			// TO ADD A NEW TASK:
