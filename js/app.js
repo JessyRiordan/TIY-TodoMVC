@@ -20,6 +20,7 @@
 			if ( event.keyCode === 13 ){
 				var task = document.querySelector('input.new-todo').value;
 				todos.taskList.push(task);
+				document.querySelector('input.new-todo').value= "";
 				console.log(todos.taskList);
 				}
 			// TO ADD A NEW TASK:
