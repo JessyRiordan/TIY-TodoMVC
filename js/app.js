@@ -33,13 +33,24 @@
 				}
 			});
 
-var deleteTask = document.querySelector("ul.todo-list")
-
-		deleteTask.addEventListener('mouseover', function(){
-
+var deleteTask = document.querySelector("ul.todo-list");
+var deleteTaskButton = document.querySelectorAll('button.destroy');
+		deleteTask.addEventListener('mouseover', function delteTaskController(event){
 			console.log("hello");
+		});
 
-		})
+		_.forEach(deleteTaskButton, function(element, index, deleteTaskButton){
+			element.addEventListener('click', function(){
+				console.log("delete works");
+			});
+		});
+
+var editTask = document.querySelectorAll("li");
+		_.forEach(editTask, function(element, index, editTask){
+			element.addEventListener("dblclick", function(){
+				console.log("i can edit");
+			});
+		});
 
 })(window);
 
