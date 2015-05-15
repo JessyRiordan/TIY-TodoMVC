@@ -31,16 +31,47 @@
 
 				console.log(todos.taskList);
 				}
-			// TO ADD A NEW TASK:
-			// GIVEN an HTML element <input class="new-todo">
-			// WHEN the user types a task AND presses the "Enter" key
-			// THEN
-			// 1. Click on "What needs to be done?" (input.new-todo)
-			// 2. Type the thing you want to remember (task!).
-			// 3. Press the "Enter" key
-			// 4. ROBOT: Save the thing to remember (task) to the list of things to remember (taskList)
-			// 5. ROBOT: Remove the thing to remember (task) from the "What needs to be done?" box (input.new-todo)
-			// 6. ROBOT: Update the number of tasks in the footer....
-			// 7. ROBOT: Add a new task (ul.todo-list > li) to the list of tasks _in the display_ (ul.todo-list)
-		});
+			});
+
+var deleteTask = document.querySelector("ul.todo-list")
+
+		deleteTask.addEventListener('mouseover', function(){
+
+			console.log("hello");
+
+		})
+
 })(window);
+
+// TO ADD A NEW TASK:
+// GIVEN an HTML element <input class="new-todo">
+// WHEN the user types a task AND presses the "Enter" key
+// THEN
+// 1. Click on "What needs to be done?" (input.new-todo)
+// 2. Type the thing you want to remember (task!).
+// 3. Press the "Enter" key
+// 4. ROBOT: Save the thing to remember (task) to the list of things to remember (taskList)
+// 5. ROBOT: Remove the thing to remember (task) from the "What needs to be done?" box (input.new-todo)
+// 6. ROBOT: Update the number of tasks in the footer....
+// 7. ROBOT: Add a new task (ul.todo-list > li) to the list of tasks _in the display_ (ul.todo-list)
+
+// CONTROLLER FOR: I can delete a task from my list...
+// 1. What event should I be listening for?    Mouseover
+// 2. What element makes sense to listen for that event?
+// 3. What do I need to do when that event fires?
+
+// CONTROLLER FOR: I can edit a task on my list...
+// 1. What event should I be listening for?
+// 2. What element makes sense to listen for that event?
+// 3. What do I need to do when that event fires?
+
+
+// CONTROLLER FOR: I can complete a task on my list...
+// 1. What event should I be listening for?
+// 2. What element makes sense to listen for that event?
+// 3. What do I need to do when that event fires?
+
+// CONTROLLER FOR: I can view the list...
+// 1. What event should I be listening for?
+// 2. What element makes sense to listen for that event?
+// 3. What do I need to do when that event fires?
