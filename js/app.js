@@ -4,30 +4,26 @@
   var newTodoInput = document.querySelector('input.new-todo');
 
   newTodoInput.addEventListener('keyup', function addTodoController(event) {
-    if (event.keyCode !== 13) return;
+    if (event.keyCode !== 13 || newTodoInput.value === "") return;
 
-      var task = newTodoInput.value,
-			  	todoCountElement = document.querySelector('span.todo-count');
+    var task = newTodoInput.value,
+      todoCountElement = document.querySelector('span.todo-count');
 
-      todos.addTask(task, todos.taskList);
+    todos.addTask(task, todos.taskList);
 
-			newTodoInput.value = "";
+    newTodoInput.value = "";
 
-			var todoCountText = todos.taskList.length + ' item';
-			if (todos.taskList.length === 1){
-				todoCountText += ' left';
-			} else {
-				todoCountText += 's left';
-			};
+    var todoCount = document.querySelector('span.todo-count');
+    todos.footerCount(todoCount);
 
 
-		//todoCountElement.text = todoCountText;
+    //todoCountElement.text = todoCountText;
 
     document.querySelector('ul.todo-list').innerHTML += (
-        "<li><div><input class= 'toggle' type= 'checkbox'><label>" + task + "</label><button class= 'destroy'></input.toggle></div></li>"
-      )
+      "<li><div><input class= 'toggle' type= 'checkbox'><label>" + task + "</label><button class= 'destroy'></input></div></li>"
+    )
 
-     console.log(todos.taskList);
+    console.log(todos.taskList);
 
   });
 
