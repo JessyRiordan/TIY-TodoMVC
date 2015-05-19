@@ -27,15 +27,16 @@
 
   });
 
-  var deleteTask = document.querySelector("ul.todo-list");
-  var deleteTaskButton = document.querySelectorAll('button.destroy');
+  var list = document.querySelector('ul.todo-list');
+//  var deleteTaskButton = document.querySelectorAll('button.destroy');
   // deleteTask.addEventListener('mouseover', function delteTaskController(event){
   // 	console.log("hello");
   // });
 
-  _.forEach(deleteTaskButton, function(element, index, deleteTaskButton) {
-    element.addEventListener('click', function() {
-      console.log("delete works");
+  _.forEach(list, function(element) {
+    element.addEventListener('click', function(event) {
+      if event.target.tagName === 'BUTTON' && event.target.className === 'destroy'
+      console.log("delete works", event.target);
     });
   });
 
